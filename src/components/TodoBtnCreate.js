@@ -1,7 +1,7 @@
 
 const TodoBtnCreate = () => {
     return(
-        <button>Crear items.</button>
+        <button>X</button>
     );
 }
 
