@@ -6,6 +6,14 @@ import { TodoBtnCreate } from './components/TodoBtnCreate';
 import './App.css';
 import React from 'react';
 
+const defaultTodos = [
+  {text: 'Cortar cebolla', completed: true},
+  {text: 'Tormar curso React', completed: false},
+  {text: 'Llorar con la cebolla', completed: true},
+  {text: 'Dormir', completed: false},
+  {text: 'Comer', completed: true}
+];
+
 function App() {
   return (
     <React.Fragment>
@@ -16,11 +24,14 @@ function App() {
 
       <TodoSearch />
 
-      <TodoList>
-
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+        <TodoList>
+          {defaultTodos.map(todo => (
+            <TodoItem
+              key={todo.text} 
+              text={todo.text} 
+              completed={todo.completed}/>
+          ) )}
+          <TodoItem />
 
       </TodoList>
 
