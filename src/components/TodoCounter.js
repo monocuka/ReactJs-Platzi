@@ -1,4 +1,6 @@
 
+import '../todoCounter.css';
+
 const TodoCounter = ({ total, completed }) => {
     return (
         <h1>
