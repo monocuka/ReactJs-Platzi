@@ -1,5 +1,5 @@
 
-import '../todoCounter.css';
+import '../styles/todoCounter.css';
 
 const TodoCounter = ({ total, completed }) => {
     return (
